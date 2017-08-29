@@ -20,16 +20,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import com.saurabhmalviya25.envisensor.R;
 
 public class Main3Activity extends AppCompatActivity implements SensorEventListener {
-    private SensorManager sensorManager;
-    private Sensor accelerometer;
-    private Sensor gyroscope;
-    private Sensor temperature;
-    private Sensor pressure;
 
-    GraphView graph_Acce,graph_Gyro, graph_Temperature, graph_Pressure;
-    private LineGraphSeries<DataPoint> series_Acc, series_Gyro, series_Light, series_Mag;
-
-    HandlerClass handlerClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,6 +95,16 @@ public class Main3Activity extends AppCompatActivity implements SensorEventListe
         graph_Pressure.addSeries(series_Mag);
 
     }
+    private SensorManager sensorManager;
+    private Sensor accelerometer;
+    private Sensor gyroscope;
+    private Sensor temperature;
+    private Sensor pressure;
+
+    GraphView graph_Acce,graph_Gyro, graph_Temperature, graph_Pressure;
+    private LineGraphSeries<DataPoint> series_Acc, series_Gyro, series_Light, series_Mag;
+
+    HandlerClass handlerClass;
     int indexAcce=0,indexGyro=0, indexLight =0, indexMag =0;
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
