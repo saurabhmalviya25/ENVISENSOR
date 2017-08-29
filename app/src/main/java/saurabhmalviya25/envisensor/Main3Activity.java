@@ -19,7 +19,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.saurabhmalviya25.envisensor.R;
 
-public class SecondActivity extends AppCompatActivity implements SensorEventListener {
+public class Main3Activity extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor accelerometer;
     private Sensor gyroscope;
@@ -33,7 +33,7 @@ public class SecondActivity extends AppCompatActivity implements SensorEventList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_2);
 
         handlerClass=new HandlerClass();
 
@@ -71,11 +71,11 @@ public class SecondActivity extends AppCompatActivity implements SensorEventList
 
         // data
         series_Acc = new LineGraphSeries<DataPoint>();
-        series_Acc.setTitle("Accelerometer");
+        series_Acc.setTitle("Acc");
         series_Acc.setColor(Color.RED);
 
         series_Gyro = new LineGraphSeries<DataPoint>();
-        series_Gyro.setTitle("Gyrometer");
+        series_Gyro.setTitle("Gyr");
         series_Gyro.setColor(Color.GREEN);
 
         series_Light = new LineGraphSeries<DataPoint>();
@@ -83,7 +83,7 @@ public class SecondActivity extends AppCompatActivity implements SensorEventList
         series_Light.setColor(Color.YELLOW);
 
         series_Mag = new LineGraphSeries<DataPoint>();
-        series_Mag.setTitle("Magnetic Field");
+        series_Mag.setTitle("Magnetic");
         series_Mag.setColor(Color.BLUE);
 
         graph_Acce.getLegendRenderer().setVisible(true);
@@ -174,7 +174,7 @@ public class SecondActivity extends AppCompatActivity implements SensorEventList
 
     }
     public void OnSecondButtonClick(View view){
-        Intent intent=new Intent(SecondActivity.this,MainActivity.class);
+        Intent intent=new Intent(Main3Activity.this,MainActivity.class);
         startActivity(intent);
         finish();
     }

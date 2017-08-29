@@ -16,8 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="saurabhmalviya25.envisensor.SecondActivity" />
-        <activity android:name="saurabhmalviya25.envisensor.Main2Activity"></activity>
+        <activity android:name="saurabhmalviya25.envisensor.Main3Activity" />
     </application>
 
 </manifest>
